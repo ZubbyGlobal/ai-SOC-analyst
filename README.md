@@ -33,7 +33,7 @@ To be transparent about where the engineering work is: I designed and built the 
 
        Walkthrough
 
-1. Attack launched from attacker VM — `[screenshot]`
+1. Attack launched from attacker VM — ![Attack launched from attacker VM](https://github.com/ZubbyGlobal/ai-SOC-analyst/blob/ffeebc81dc20909e03eb6a7bde28ccdbeaaeeaea/screenshot/Attack-launched-from-attacker-VM(win10).png)
 2. Alert payload built by the Python script — `[screenshot/code snippet]`
 3. Airia AI's returned verdict — ![screenshots/'Airia AI's returned verdict.png'](https://github.com/ZubbyGlobal/ai-SOC-analyst/blob/38efa846cdbfae0eeb1fa28ed42adcf00c399a2a/screenshot/Airia-AI's-returned-verdict.png)
 
