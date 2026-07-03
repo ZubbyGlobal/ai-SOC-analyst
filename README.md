@@ -34,7 +34,7 @@ To be transparent about where the engineering work is: I designed and built the 
        Walkthrough
 
 1. Attack launched from attacker VM — ![Attack launched from attacker VM](https://github.com/ZubbyGlobal/ai-SOC-analyst/blob/ffeebc81dc20909e03eb6a7bde28ccdbeaaeeaea/screenshot/Attack-launched-from-attacker-VM(win10).png)
-2. Alert payload built by the Python script — `[screenshot/code snippet]`
+2. Alert payload built by the Python script — ![Alert payload built by the Python script](https://github.com/ZubbyGlobal/ai-SOC-analyst/blob/19fcb12a99b459015c548b9617ae24a2c79b4493/screenshot/Raw-log-and-alert-payload-built-by-the-Python-script.png)
 3. Airia AI's returned verdict — ![screenshots/'Airia AI's returned verdict.png'](https://github.com/ZubbyGlobal/ai-SOC-analyst/blob/38efa846cdbfae0eeb1fa28ed42adcf00c399a2a/screenshot/Airia-AI's-returned-verdict.png)
 
        Sample output
@@ -63,21 +63,47 @@ What I'd improve next
    Run it yourself
 
 ```bash
+## Run it yourself
+
+### Prerequisites
+- Python 3.8+
+- [Wireshark/tshark](https://www.wireshark.org/) installed and available on your PATH
+- A network interface to capture on (run `ip a` to list yours)
+- Sufficient privileges to capture packets (typically requires `sudo`)
+- An Airia AI account with an active agent and API key
+
+### Setup
+
+\`\`\`bash
 # clone the repo
-git clone [your-repo-url]
-cd [repo-name]
+git clone https://github.com/YOUR-USERNAME/ai-soc-analyst.git
+cd ai-soc-analyst
 
 # install dependencies
 pip install -r requirements.txt
 
 # configure your Airia AI credentials
 cp .env.example .env
+# then open .env and paste in your real AIRIA_API_URL and AIRIA_API_KEY
+\`\`\`
 
-# run the pipeline
-python main.py
-```
+### Configure the capture
 
----
+Open `main.py` and update these values for your environment:
+
+\`\`\`python
+INTERFACE = "eth0"                    # your network interface, from `ip a`
+DESTINATION_IP = "192.168.0.206"      # the IP of the server you're monitoring
+THRESHOLD = 40                        # packet count that triggers an alert
+\`\`\`
+
+### Run
+
+\`\`\`bash
+sudo python3 main.py
+\`\`\`
+
+The script captures traffic for the configured duration, analyzes it, and if a suspicious IP crosses the threshold it generates an alert and sends it to your Airia AI agent automatically. The verdict prints to your terminal and saves to `sample_output.json`.
 
 Built as a hands on project to explore how AI agents can reduce analyst workload in the SOC without removing human judgment from the loop. Feedback welcome.
 
