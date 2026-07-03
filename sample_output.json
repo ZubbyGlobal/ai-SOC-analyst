@@ -1,0 +1,11 @@
+{
+    "$type": "string",
+    "result": "{\n  \"alert_id\": \"SOC-1ADF9515\",\n  \"threat_classification\": \"Unknown\",\n  \"risk_score\": 0,\n  \"risk_level\": \"Low\",\n  \"confidence_level\": \"Low\",\n  \"mitre_mapping\": {\n    \"tactic\": \"Uncertain based on available evidence\",\n    \"technique_id\": \"\",\n    \"technique_name\": \"\"\n  },\n  \"analysis_reasoning\": \"Input validation failed: missing required fields - source_host and protocol. Because of incomplete telemetry, no reliable threat classification or MITRE mapping can be performed. Provided indicators: indicator_type IP, indicator_value 192.168.1.167; destination_host Internal-server; destination_ip 192.168.1.145; evidence: packet_count 50, time_window_seconds 100. The alert_type is 'Suspicious Network Volume' but without source_host and protocol, we cannot assess scope, source, or protocol-level details.\",\n  \"recommended_actions\": [\n    \"Monitor\",\n    \"Review authentication logs\",\n    \"Enrich with threat intelligence\"\n  ],\n  \"escalation_required\": false,\n  \"executive_summary\": \"Insufficient data to determine if the traffic is malicious. The alert reports suspicious network volume but lacks key telemetry, so we should monitor and review logs to determine if business impact is risk of lateral movement or data exfiltration.\"\n}",
+    "isGuardrailBlock": false,
+    "report": null,
+    "isBackupPipeline": false,
+    "executionId": "7fb2a03f-0cd5-43c3-b154-5d0b173e3497",
+    "userInputId": "61831a19-986e-44e0-a966-2ac04b3f586f",
+    "files": [],
+    "images": []
+}
