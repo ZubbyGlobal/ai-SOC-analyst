@@ -35,7 +35,7 @@ To be transparent about where the engineering work is: I designed and built the 
 
 1. Attack launched from attacker VM — `[screenshot]`
 2. Alert payload built by the Python script — `[screenshot/code snippet]`
-3. Airia AI's returned verdict — `screenshots/Airia AI's returned verdict.png`
+3. Airia AI's returned verdict — `[screenshots/Airia AI's returned verdict.png]`
 
        Sample output
 
