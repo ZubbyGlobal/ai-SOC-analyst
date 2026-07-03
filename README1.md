@@ -34,9 +34,8 @@ To be transparent about where the engineering work is: I designed and built the 
        Walkthrough
 
 1. Attack launched from attacker VM — `[screenshot]`
-2. Raw log generated on the server VM — `[screenshot]`
-3. Alert payload built by the Python script — `[screenshot/code snippet]`
-4. Airia AI's returned verdict — `[screenshot]`
+2. Alert payload built by the Python script — `[screenshot/code snippet]`
+3. Airia AI's returned verdict — `screenshots/Airia AI's returned verdict.png`
 
        Sample output
 
