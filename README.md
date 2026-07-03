@@ -76,7 +76,7 @@ What I'd improve next
 
 \`\`\`bash
 # clone the repo
-git clone https://github.com/YOUR-USERNAME/ai-soc-analyst.git
+git clone https://github.com/ZubbyGlobal/ai-soc-analyst.git
 cd ai-soc-analyst
 
 # install dependencies
